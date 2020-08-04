@@ -7,7 +7,6 @@ import com.fayaman.userblog.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -22,7 +21,7 @@ public class MyDataLoader {
         this.userRepository = userRepository;
         this.articleRepository = articleRepository;
     }
-       @PostConstruct
+  //    @PostConstruct
     private void generateData(){
         List<User> users = new ArrayList<>();
         users.add(User.builder().name("Igor").createdAt(new Date()).age(24).articlesIds(new ArrayList<>()).articlesIds(new ArrayList<>()).build());
