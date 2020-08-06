@@ -22,7 +22,6 @@ public class UserDataFetcher implements DataFetcher<User> {
     @Override
     public User get(DataFetchingEnvironment env) {
         Map args = env.getArguments();
-        User user = userService.findOneById(new ObjectId(String.valueOf(args.get("id"))));
-        return null;
+        return userService.findOneById(new ObjectId(String.valueOf(args.get("id"))));
     }
 }
